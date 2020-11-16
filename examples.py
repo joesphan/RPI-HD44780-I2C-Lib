@@ -2,7 +2,9 @@
 import RPi_I2C_driver
 from time import *
 
-mylcd = RPi_I2C_driver.lcd()
+#initiation I2C_LCD_driver.lcd(bus, address)
+mylcd = I2C_LCD_driver.lcd(1, 0x33)
+#leave params empty for default 1, 0x3f
 # test 2
 mylcd.lcd_display_string("RPi I2C test", 1)
 mylcd.lcd_display_string(" Custom chars", 2)
